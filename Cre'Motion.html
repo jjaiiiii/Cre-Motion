@@ -1,0 +1,204 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Cre'Motion</title>
+    <style>
+        body {
+            background-color: #ffc4e1;
+            margin: 0; 
+        }
+    
+        .nav-wrapper {
+            background-color: #d16fa0; 
+        }
+        .container1 {
+            margin-top: 2px;
+            margin-left: 40px;
+            margin-right: 40px;
+            z-index: 1;
+        }
+        .image-container {
+            display: flex;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            align-items: center;
+            position: relative;
+        }
+        .image-container img {
+            width: 20%;
+            margin-left: 5%;
+            position: relative;
+            
+        }
+        .text-container {
+            color: #ff4081;
+            font-family: Impact;
+            font-size: 3vw;
+            margin-left: 40px; 
+            position: relative;
+        }
+        .card {
+            height: 300px;
+            width: auto;
+        }
+        div.scroll-container {
+            background-color: #ffc4e1;
+            overflow: auto;
+            white-space: nowrap;
+            padding: 10px;
+        }
+
+div.scroll-container img {
+  padding: 10px;
+}
+        
+        
+    </style>
+</head>
+<body>
+    <nav class="nav-wrapper pink lighten-2">
+        <div class="container">
+            <a href="#" class="brand-logo" style="font-family: Impact;">Cre'Motion</a>
+            <a href="#" class="sidenav-trigger" data-target="mobile-links" id="pagod">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#top">
+                    <i class="material-icons">feed</i>
+                </a></li>
+                <li><a href="#bottom">
+                    <i class="material-icons">person</i>
+                </a></li>
+                <li><a href="#bottom">
+                    <i class="material-icons">call</i>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-links">
+        <li><a href="#top" class="btn pink accent-1">Feed</a></li>
+        <li><a href="#bottom" class="btn pink accent-1">About</a></li>
+        <li><a href="#bottom" class="btn pink accent-1">Contact</a></li>
+    </ul>
+    <div class="container2">
+        <div class="image-container">
+            <img src="Your paragraph text.jpg" alt="wala lang" class="responsive">
+            <div class="text-container">
+                <p>Express yourself freely at Cre'Motion, <br> the platform where your thoughts, <br> rants, and life reflections find a home.</p>
+            </div>
+        </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="vibrant-pink-watercolor-painting-background.jpg" alt="Parallax Image"></div>
+    </div>
+
+
+    <div class="container1">
+        <div class="row">
+            <div class="col s11 offset-m4 m4">
+                <div class="card" class="pink lighten-2"> 
+                    <div class="card-content" class="responsive">
+                        <span class="card-title"></span>
+                        <div class="input-field">
+                            <textarea id="message" class="materialize-textarea"></textarea>
+                            <label for="message">Your Freedom Wall</label>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <button class="btn pink lighten-2" onclick="postMessage()">Post</button>
+                        <div id="postedMessageContainer" style="display: none;">
+                            <div class="card" style="width: auto; height: fit-content;">
+                                <div class="card-content pink lighten-2" style="display: inline-block;">
+                                    <span class="card-title white-text" style="font-size: 1.2rem; line-height: 1;">I'ts already posted on your wall!</span>
+                                </div>
+                            </div>
+                            <button class="btn pink lighten-2" style="margin-top: 20px; height: fit-content;" onclick="writeAgain()">Write Again</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col s12 m6" id="mamamo">
+        <h4 class="center" style="color: #ff4081; font-family: Impact">Your Wall</h4>
+        <ul id="messageList" class="collection scroll-container" style="margin-left: 30%; margin-right: 30%;"></ul>
+    </div>
+
+    <div class="parallax-container">
+        <div class="parallax"><img src="vibrant-pink-watercolor-painting-background.jpg" alt="Parallax Image"></div>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="scroll-container">
+        <img src="Cwote.jpg" alt="janine" style="width: 300px; height: auto;">
+        <img src="download (1).jpg" alt="janine" style="width: 300px; height: auto;">
+        <img src="pink daily reminder.jpg" alt="janine" style="width: 300px; height: auto;">
+        <img src="ja.jpg" alt="janine" style="width: 300px; height: auto;">
+        <img src="jaja.jpg" alt="janine" style="width: 300px; height: auto;">
+        <img src="no.jpg" alt="janine" style="width: 300px; height: auto;">
+    </div>
+    <article class="scrollspy" id="about">
+        <h5 class="center">About</h5>
+    </article>
+    <br>
+    <section class="joinscrollspy" id="feed">
+        <a href="#top" class="center" style="margin-left: 49%;">Back to the top</a>
+    </section>
+    <br>
+    <section class="joinscrollspy" id="feed">
+        <a href="#message" class="center" style="margin-left: 49%;">Post</a>
+    </section>
+    <br>
+    <section class="joinscrollspy" id="feed">
+        <a href="#mamamo" class="center" style="margin-left: 49%;"> My Wall</a>
+    </section>
+    <br>
+    <li class="center" id="bottom""><i class="material-icons">email</i>Janinemaquirang0@gmail.com</li>
+    <li class="center" id="bottom""><i class="material-icons">call</i>09641831153</li>
+    <br>
+    <article class="scrollspy" id="about">
+        <h7 class="center">Copyright 2023.</h7>
+    </article>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.parallax');
+            var instances = M.Parallax.init(elems);
+        });
+        function postMessage() {
+            const messageText = $('#message').val();
+            if (messageText.trim() !== '') {
+                const listItem = $('<li>').addClass('collection-item').text(messageText);
+                $('#messageList').append(listItem);
+                $('#message').val('');
+                $('.card-action button').hide();
+                $('#postedMessageContainer').css('display', 'flex');
+                $('#postedMessageContainer button').show();
+            }
+        }
+    
+        function writeAgain() {
+            $('.card-action button').show();
+            $('#postedMessageContainer').css('display', 'none');
+        }
+    
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+        $(document).ready(function () {
+            $('.scrollspy').scrollSpy();
+        });
+    </script>
+</body>
+</html>
